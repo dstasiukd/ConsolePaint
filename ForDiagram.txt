@@ -1,0 +1,67 @@
+@startuml
+
+abstract class Shape{
+    get_parameters()
+    draw(canvas)
+    move(dx, dy, canvas)
+    erase(canvas)
+}
+
+class Rectangle {
+    -x1, y1, x2, y2
+    -border_char
+    -fill_char
+    +get_parameters()
+    +draw()
+    +move()
+    +erase()
+}
+
+class Triangle {
+    -x, y, height
+    -char
+    +get_parameters()
+    +draw()
+    +move()
+    +erase()
+}
+
+class Circle {
+    -x, y, radius
+    -char
+    +get_parameters()
+    +draw()
+    +move()
+    +erase()
+}
+
+class ASCIIPaint {
+    -width : int
+    -height : int 
+    -background : str
+    -canvas : list
+    -shapes : dict
+    +add_shape()
+    +delete_shape()
+    +redraw_canvas()
+    +list_shapes()
+    +save_state()
+    +set_background()
+    +display()
+    +save_to_file()
+    +load_from_file()
+    +undo()
+    +redo()
+    +move_shape()
+}
+
+class PaintApp {
+    menu()
+}
+
+Shape <|-- Rectangle
+Shape <|-- Triangle
+Shape <|-- Circle
+Shape *-- ASCIIPaint
+ASCIIPaint <-- PaintApp
+@enduml
