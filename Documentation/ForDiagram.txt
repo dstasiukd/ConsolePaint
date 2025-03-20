@@ -1,20 +1,22 @@
 @startuml
 
 abstract class Shape{
-    get_parameters()
-    draw(canvas)
-    move(dx, dy, canvas)
-    erase(canvas)
+    get_parameters() : abstract
+    draw(canvas) : abstract
+    move(dx, dy, canvas) : abstract
+    erase(canvas) : abstract
+    fill(canvas, fill_char) : abstract
 }
 
 class Rectangle {
-    -x1, y1, x2, y2
+    -x1, y1, width, height
     -border_char
     -fill_char
     +get_parameters()
     +draw()
     +move()
     +erase()
+    +fill()
 }
 
 class Triangle {
@@ -28,11 +30,13 @@ class Triangle {
 
 class Circle {
     -x, y, radius
-    -char
+    -border_char
+    -fill_char
     +get_parameters()
     +draw()
     +move()
     +erase()
+    +fill()
 }
 
 class ASCIIPaint {
@@ -53,6 +57,7 @@ class ASCIIPaint {
     +undo()
     +redo()
     +move_shape()
+    +fill_shape()
 }
 
 class PaintApp {
@@ -64,4 +69,5 @@ Shape <|-- Triangle
 Shape <|-- Circle
 Shape *-- ASCIIPaint
 ASCIIPaint <-- PaintApp
+
 @enduml
