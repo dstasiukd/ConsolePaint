@@ -1,3 +1,3 @@
 # ConsolePaint
-# Simple Paint app by Darya Stasiuk
-# group 353505
+## Simple Paint app by Darya Stasiuk
+## group 353505
