@@ -1,4 +1,4 @@
-from PaintApp import PaintApp
+from App.PaintApp import PaintApp
 
 def main():
     app = PaintApp()

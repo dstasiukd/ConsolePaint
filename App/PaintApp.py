@@ -1,4 +1,4 @@
-from Canvas import ASCIIPaint
+from App.Canvas import ASCIIPaint
 from Shapes.Rectangle import Rectangle
 from Shapes.Triangle import Triangle
 from Shapes.Circle import Circle
