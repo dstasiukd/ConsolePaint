@@ -68,9 +68,11 @@ class Triangle(Shape):
         if self.fill_char:
             self.fill(canvas)  
 
-    def fill(self, canvas):
+    def fill(self, canvas, fill_char):
         if not self.calc_third_point():
             return
+        
+        self.fill_char = fill_char
         
         min_y = min(self.y1, self.y2, self.y3)
         max_y = max(self.y1, self.y2, self.y3)
