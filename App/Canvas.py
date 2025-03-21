@@ -34,7 +34,6 @@ class ASCIIPaint:
             print("Error: Shape ID not found.")
 
     def redraw_canvas(self):
-        """Clears the canvas and redraws all remaining shapes."""
         self.canvas = [[self.background for _ in range(self.width)] for _ in range(self.height)]  
         for shape in self.shapes.values():
             shape.draw(self) 
@@ -137,5 +136,24 @@ class ASCIIPaint:
         else:
             print("Error: Shape ID not found.")
 
+    
+    def fill_shape(self):
+        if not self.shapes:
+            print("No shapes to fill!")
+            return
 
-   
+        self.list_shapes()  
+        shape_id = int(input("Enter the ID of the shape to fill: "))
+
+        if shape_id in self.shapes:
+            fill_char = input("Enter fill character: ")
+            shape = self.shapes[shape_id]
+            shape.fill(self, fill_char)
+            self.save_state()
+            print(f"Shape {shape_id} filled successfully.")
+        else:
+            print("Error: Shape ID not found.")
+
+
+
+    
