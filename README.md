@@ -1,6 +1,6 @@
 # ConsolePaint
 Simple Paint app by Darya Stasiuk from group 353505
-## UI description
+# UI description
 The UI includes a canvas (width = 100, height = 20) with a frame and a drop-down menu where you can select one of the suggested commands. 
 ```
 +----------------------------------------------------------------------------------------------------+
@@ -42,9 +42,9 @@ ASCII Paint Menu:
 13. Exit
 Enter your choice:
 ```
-## Functions
-# draw
-## Rectangle
+#  Functions
+## draw
+**Rectangle** 
 ```
 +----------------------------------------------------------------------------------------------------+
 |                                                                                                    |
@@ -110,10 +110,72 @@ Enter fill character (or leave blank):
 |                         **********                                                                 |
 +----------------------------------------------------------------------------------------------------+
 ```
-## Triangle
+**Triangle**
 ```
++----------------------------------------------------------------------------------------------------+
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
++----------------------------------------------------------------------------------------------------+
+
+ASCII Paint Menu:
+1. Draw a rectangle
+2. Draw a triangle
+3. Draw a circle
+4. Fill a shape
+5. Set background character
+6. Save to file
+7. Load from file
+8. Move shape
+9. Delete shape
+10. List of shapes
+11. Undo
+12. Redo
+13. Exit
+Enter your choice: 2
+Enter x y coordinates and a b c: 35 12 13 18 27
+Enter character: .
++----------------------------------------------------------------------------------------------------+
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                  ..                                                |
+|                                                .. .                                                |
+|                                              ..  .                                                 |
+|                                           ...    .                                                 |
+|                                         ..      .                                                  |
+|                                       ..        .                                                  |
+|                                     ..         .                                                   |
+|                                   ..............                                                   |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
+|                                                                                                    |
++----------------------------------------------------------------------------------------------------+
 ```
-## Circle
+**Circle**
 ```
 +----------------------------------------------------------------------------------------------------+
 |                                                                                                    |
@@ -179,7 +241,7 @@ Enter fill character (or leave blank):
 |                         $                                                                          |
 +----------------------------------------------------------------------------------------------------+
 ```
-# fill_shape
+## fill_shape
 ```
 Current Shapes on Canvas:
 ------------------------------------------------------
@@ -213,7 +275,7 @@ Shape 1 filled successfully.
 |                                                                                                    |
 +----------------------------------------------------------------------------------------------------+
 ```
-# set_background
+## set_background
 Сhanges the background color
 ```
 +----------------------------------------------------------------------------------------------------+
@@ -278,7 +340,7 @@ Enter a single character for the background: .
 |....................................................................................................|
 +----------------------------------------------------------------------------------------------------+
 ```
-# save_to_file
+## save_to_file
 This function saves the current state of the object to a file
 ```
 +----------------------------------------------------------------------------------------------------+
@@ -344,7 +406,7 @@ Contents of file 1.txt:
 ....................................................................................................
 ....................................................................................................
 ```
-# load_from_file
+## load_from_file
 This function loads data from a file and restores the state of the object.
 Contents of file 1.txt:
 ```
@@ -396,7 +458,7 @@ Canvas loaded from '1.txt' successfully!
 |.........................$$$$$$$$$$.................................................................|
 +----------------------------------------------------------------------------------------------------+
 ```
-# move_shape
+## move_shape
 ```
 Current Shapes on Canvas:
 ------------------------------------------------------
@@ -408,7 +470,7 @@ Enter the ID of the shape to move: 2
 Enter the amount to move (dx dy): 5 0
 Shape 2 moved successfully.
 ```
-# delete_shape 
+## delete_shape 
 Deletes a figure by a given ID, displaying a list of figures before doing so
 ```
 Current Shapes on Canvas:
@@ -421,7 +483,7 @@ ID    Shape      Parameters
 Enter the ID of the shape to delete: 1
 Shape 1 deleted successfully.
 ```
-# list_shapes
+## list_shapes
 It is possible to view the list of shapes, which contains the id, what shape (circle, rectangle or triangle) and their parameters (for example: radius, height, width, fill_char etc.)
 ```
 Current Shapes on Canvas:
@@ -432,9 +494,9 @@ ID    Shape      Parameters
 2     Circle     x = 4, y = 5, radius = 1, border_char = '#, fill_char ='None'
 ------------------------------------------------------
 ```
-# undo
+## undo
 This function undoes the last change, returning the state of the object to the previous version.
-# redo
+## redo
 This function redoes an undone action, restoring the object's state to the state that was undone.
 # UML Diagramm
 ![](Documentation/uml.png)
