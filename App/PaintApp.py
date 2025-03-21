@@ -35,8 +35,9 @@ class PaintApp:
                 self.paint.add_shape(shape)
             elif choice == '2':
                 x, y, a, b, c = map(int, input("Enter x y coordinates and a b c: ").split())
-                char = input("Enter character: ")
-                shape = Triangle(x, y, a, b, c, char)
+                border_char = input("Enter border character: ")
+                fill_char = input("Enter fill character (or leave blank): ") or None
+                shape = Triangle(x, y, a, b, c, border_char, fill_char)
                 self.paint.add_shape(shape)
             elif choice == '3':
                 x, y, radius = map(int, input("Enter (x, y) coordinates and radius: ").split())
