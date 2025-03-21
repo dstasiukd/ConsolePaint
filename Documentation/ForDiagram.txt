@@ -20,12 +20,17 @@ class Rectangle {
 }
 
 class Triangle {
-    -x, y, height
-    -char
+    -x, y, a, b, c
+    -border_char
+    -fill_char
     +get_parameters()
     +draw()
     +move()
     +erase()
+    +fill()
+    +draw_line()
+    +calc_third_point()
+    +is_valid_triangle()
 }
 
 class Circle {
