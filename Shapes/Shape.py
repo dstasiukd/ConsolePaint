@@ -22,3 +22,7 @@ class Shape(abc.ABC):
     @abc.abstractmethod
     def erase(self, canvas):
         pass
+
+    @abc.abstractmethod
+    def fill(self, canvas, fill_char):
+        pass
